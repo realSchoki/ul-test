@@ -7,4 +7,4 @@ WORKDIR ~/server
 
 COPY . .
 
-CMD ["start.sh"]
+CMD ["./start.sh"]
