@@ -1,0 +1,43 @@
+name: '{{name}}'
+host: {{host}}
+port: {{port}}
+players: {{players}}
+{{#password}}
+password: {{password}}
+{{/password}}
+announce: {{announce}}
+{{#token}}
+token: {{token}}
+{{/token}}
+gamemode: {{gamemode}}
+website: {{website}}
+language: {{language}}
+description: {{description}}
+debug: {{debug}}
+{{#streamingDistance}}
+streamingDistance: {{streamingDistance}}
+{{/streamingDistance}}
+migrationDistance: {{migrationDistance}}
+{{! voice: {{voice}}
+tags: [
+{{#tags}}
+  "{{name}}"
+{{/tags}}
+]
+useEarlyAuth: {{useEarlyAuth}}
+{{#useEarlyAuth}}
+streamingDistance: {{earlyAuthUrl}}
+{{/useEarlyAuth}}
+useCdn: {{useCdn}}
+{{#useCdn}}
+cdnUrl: {{cdnUrl}}
+{{/useCdn}}
+modules: [
+  js-module
+  csharp-module
+]
+resources: [
+{{#resources}}
+  {{name}}
+{{/resources}}
+]
