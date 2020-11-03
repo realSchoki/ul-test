@@ -94,7 +94,8 @@ Object.entries(process.env).filter( item => item[0].startsWith('UL_')).forEach( 
 })
 
 let rawdata = fs.readFileSync(`templates/server.cfg.mustache`);
-var output = mustache.render(rawdata.toString(), settings);
+let output = mustache.render(rawdata.toString(), settings);
+fs.writeFileSync(`server.cfg`, output)
 
 console.log("Starting server...")
 
