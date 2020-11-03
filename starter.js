@@ -74,7 +74,6 @@ const default_settings = {
     resources: getResources(process.env.UL_ENV),
     announce: false,
     gamemode: 'Freeroam',
-    website: 'example.com',
     language: 'de',
     debug: false,
     migrationDistance: 150,
@@ -88,9 +87,9 @@ const default_settings = {
 var settings = default_settings
 Object.entries(process.env).filter( item => item[0].startsWith('UL_')).forEach( item => {
     if(item[0] === "UL_TAGS"){
-        settings[env_to_var[item[0]]] = item[1].split(',').map( val => ({name: val}))
+        settings[env_to_var[item[0].toLowerCase()]] = item[1].split(',').map( val => ({name: val}))
     } else if (env_to_var[item[0]]) { 
-        settings[env_to_var[item[0]]] = item[1]
+        settings[env_to_var[item[0].toLowerCase()]] = item[1]
     }
 })
 
