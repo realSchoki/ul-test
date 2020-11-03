@@ -18,8 +18,8 @@ WORKDIR /home/altv/server
 COPY . .
 
 RUN chown altv:altv ./ -R \
-    && chmod +x ./start.sh ./altv-server
+    && chmod +x ./starter.sh ./altv-server
 
 USER altv
 
-CMD ["./start.sh"]
+CMD ["./starter.sh"]
